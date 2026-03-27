@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Telefonni tahrirlash</title>
+</head>
+
+<body>
+    <h1>Telefonni tahrirlash</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Yangilash</button>
+    </form>
+    <a href="{% url 'phone_list' %}">Ortga</a>
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Telefonni o'chirish</title>
+</head>
+
+<body>
+    <h1>Rostdan ham o'chirmoqchimisiz?</h1>
+    <p>{{ phone.brand }} {{ phone.model }}</p>
+
+    <form method="post">
+        {% csrf_token %}
+        <button type="submit">Ha, o'chirilsin</button>
+    </form>
+
+    <a href="{% url 'phone_list' %}">Bekor qilish</a>
+</body>
+
+</html>
