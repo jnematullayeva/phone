@@ -12,7 +12,7 @@
     <a href="{% url 'phone_add' %}">Yangi telefon qo'shish</a>
 
     <ul>
-        {% for phones in phone %}
+        {% for phone in phones %}
         <li>
             {% if phone.photo %}
             <img src="{{ phone.photo.url }}" alt="{{ phone.model }}" width="150">
